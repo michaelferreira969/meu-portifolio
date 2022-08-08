@@ -1,0 +1,256 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Geral*/
+body {
+    font-family: 'Gill Sans', 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    min-width: 720px;
+}
+a:link, a:visited {
+    text-decoration: none;
+    color: white;
+}
+h1 {
+    font-weight: 100;
+}
+h2 {
+    text-transform: uppercase;
+    padding-top: 20px;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+h3 {
+    padding-top: 5px;
+    font-weight: 100;
+}
+h4 {
+    padding-top: 5px;
+    font-weight: 100;
+}
+p {
+    color: rgba(128, 128, 128, 0.897);
+    line-height: 20px;
+    text-align: justify;
+}
+abbr {
+    text-decoration: none;
+}
+/*Botões de link*/
+a input {
+    border: 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    color: white;
+    padding: 10px;
+    padding-left: 35px;
+    background: rgba(0, 0, 0, 0.1) no-repeat 10px;
+}
+a input:hover {
+    background-color: rgba(5, 24, 26, 0.4);
+}
+
+/*Cabeçalho*/
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    position: fixed;
+    
+    padding: 10px 20px;
+    min-width: 720px;
+
+    background: rgba(54, 231, 255, 0.1);
+    border-bottom: 2px solid rgb(0, 132, 150);
+
+    z-index: 10;
+}
+
+/*Navegação*/
+nav a:link, a:visited {
+    border-bottom: 1px solid rgba(54, 231, 255, 0);
+    color: white;
+}
+nav a:hover {
+    border-bottom: 1px solid white;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 150px;
+}
+nav ul li {
+    padding: 10px 15px;
+}
+
+/*Seções*/
+section {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 100px;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+.divisor {
+    margin: auto;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 400px;
+    text-indent: -3000px;
+
+    background: url(../img/icon-seta.png) no-repeat center; 
+}
+
+/*Classes para alterar ordem*/
+.ordenar-1 {
+    order: 1;
+}
+.ordenar-2 {
+    order: 2;
+}
+.ordenar-3 {
+    order: 3;
+}
+
+/*Seção Inicial*/
+section#inicio p {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+section#inicio strong {
+    font-size: 2em;
+    font-weight: 100;
+    color: rgb(54, 231, 255);
+}
+section#inicio span {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*Botão do Linkedin*/
+.linkedin {
+    border-color: rgb(9, 97, 184);
+    background-image: url(../img/icon-linkedin.png);
+
+    margin-left: 40px;
+    margin-right: 20px;
+}
+input.linkedin:hover {
+    background-image: url(../img/icon-linkedin-2.png);
+}
+/*Botão do Github*/
+.github {
+    border-color: rgb(49, 0, 105);
+    background-image: url(../img/icon-github.png);
+}
+input.github:hover {
+    background-image: url(../img/icon-github-2.png);
+}
+
+/*Imagem destaque*/
+img.foto-programador {
+    border-right: 10px solid rgb(0, 132, 150);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+/*Seção Sobre*/
+section#sobre article.primario {
+    padding-right: 80px;    
+}
+section#sobre article.secundario {
+    padding-left: 80px;
+}
+img.foto-perfil {
+    border-left: 5px solid rgba(54, 231, 255, 0.1);
+    box-shadow: 2px 3px 8px rgba(54, 231, 255, 0.1);
+    opacity: 0.6;
+}
+img.foto-perfil:hover {
+    border-left: 5px solid rgb(0, 132, 150);
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    opacity: 0.9;
+}
+/*Botão do currículo*/
+.botao-cv {
+    border-color: rgb(0, 132, 150);
+    background-image: url(../img/icon-download.png);
+
+    margin-top: 40px;
+}
+
+/*Seção Projetos*/
+section#projetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:first baseline;
+
+    padding-bottom: 50px;
+}
+section#projetos article {
+    background: rgba(92, 92, 92, 0.4);
+    box-shadow: 2px 3px 10px rgba(54, 231, 255, 0.1);
+    width: 580px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+section#projetos article a {
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+section#projetos article a:hover {
+    text-decoration: underline;
+}
+section#projetos article p {
+    width: 520px;
+    margin: 0 auto;
+    text-align-last: center;
+}
+section#projetos article img {
+    border-radius: 30px;
+    padding: 10px;
+    margin: 10px;
+}
+article.em-breve a {
+    color: rgb(185, 0, 0);
+    cursor: default;
+}
+article.em-breve span {
+    color: rgb(185, 0, 0);
+    font-size: 0.7em;
+    text-transform: uppercase;
+}
+img.zoom {
+    overflow: hidden;
+    transition: all 0.3s;
+}
+img.zoom:hover {
+    transform: scale(1.1);
+}
+
+/*Rodape*/
+footer {
+    background: url(../img/fundo-rodape.png) no-repeat top center;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
