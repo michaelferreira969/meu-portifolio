@@ -9,7 +9,6 @@ body {
     font-size: 16px;
     background-color: black;
     color: white;
-    min-width: 720px;
 }
 a:link, a:visited {
     text-decoration: none;
@@ -57,13 +56,24 @@ a input:hover {
 
 /*Cabeçalho*/
 header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    
     width: 100%;
     position: fixed;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    
+    justify-content: space-between;
+    
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     
     padding: 10px 20px;
     min-width: 720px;
@@ -84,7 +94,11 @@ nav a:hover {
 }
 nav ul {
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     margin-right: 150px;
 }
@@ -94,6 +108,7 @@ nav ul li {
 
 /*Seções*/
 section {
+    min-width: 920px;
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 100px;
@@ -178,14 +193,19 @@ section#sobre article.secundario {
     padding-left: 80px;
 }
 img.foto-perfil {
-    border-left: 5px solid rgba(54, 231, 255, 0.1);
+    -webkit-box-shadow: 2px 3px 8px rgba(54, 231, 255, 0.1);
     box-shadow: 2px 3px 8px rgba(54, 231, 255, 0.1);
+    border-left: 5px solid rgba(54, 231, 255, 0.1);
     opacity: 0.6;
 }
 img.foto-perfil:hover {
-    border-left: 5px solid rgb(0, 132, 150);
+    -webkit-transition-duration: 2s;
+    -o-transition-duration: 2s;
     transition-duration: 2s;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
+    border-left: 5px solid rgb(0, 132, 150);
     opacity: 0.9;
 }
 /*Botão do currículo*/
@@ -198,14 +218,20 @@ img.foto-perfil:hover {
 
 /*Seção Projetos*/
 section#projetos {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack:first baseline;
+    -ms-flex-pack:first baseline;
     justify-content:first baseline;
 
     padding-bottom: 50px;
 }
 section#projetos article {
     background: rgba(92, 92, 92, 0.4);
+    -webkit-box-shadow: 2px 3px 10px rgba(54, 231, 255, 0.1);
     box-shadow: 2px 3px 10px rgba(54, 231, 255, 0.1);
     width: 580px;
     text-align: center;
@@ -240,9 +266,13 @@ article.em-breve span {
 }
 img.zoom {
     overflow: hidden;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 img.zoom:hover {
+    -webkit-transform: scale(1.1);    
+    -ms-transform: scale(1.1);    
     transform: scale(1.1);
 }
 
