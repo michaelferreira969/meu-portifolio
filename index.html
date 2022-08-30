@@ -1,41 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!--Autor-->
     <meta name="author" content="Michael Ferreira">
+    
+    <!--Descrição-->
     <meta name="description" content="Portifólio do Desenvolvedor">
+    
+    <!--Estilo-->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!--Favicon-->
     <link rel="icon" href="img/m-logo.png" type="image/x-icon">
+    
+    <!--Ícones Font Awesome-->
+    <script src="https://kit.fontawesome.com/68c1cffbc5.js" crossorigin="anonymous"></script>
 
     <title>Michael Ferreira</title>
 </head>
 <body>
     <header id="topo">
         <h1>Portifólio Michael</h1>
+        
         <nav>
-            <ul>
+            <!--ícone Hamburguer-->
+            <i class="fa-solid fa-bars hamburguer-icon" onclick="clickMenu()"></i>
+
+            <ul class="navlist">
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#projetos">Projetos</a></li>
             </ul>
+
         </nav>
     </header>
     <section id="inicio"><!--Inicio da seção Inicial-->
         <article class="primario"><!--Inicio Conteudo primario-->
-            <p>
+            <p class="texto-apresentacao">
                 <span>Olá, eu sou</span>
                 <strong>Michael Ferreira</strong>
                 <span>desenvolvedor Front-end<span>
                 <br>
             </p>
-            <a href="https://linkedin.com/in/michaelferreira969/" target="_blank">
-                <input type="button" value="LinkedIn" class="linkedin">
-            </a>
-            <a href="https://github.com/michaelferreira969" target="_blank">
-                <input type="button" value="GitHub" class="github">
-            </a>
+            <div class="area-botoes">
+                <a href="https://linkedin.com/in/michaelferreira969/" class="linkedin" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <div class="forcar-branco">LinkedIn</div>
+                    <!-- <input type="button" value="LinkedIn"> -->
+                </a>
+                <a href="https://github.com/michaelferreira969" class="github" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    <div class="forcar-branco">Github</div>
+                </a>
+            </div>
         </article><!--Fim Conteudo primario-->
         <article class="secundario"><!--Inicio Conteudo secundario-->
             <img class="foto-programador" src="img/programador.png" alt="Programador">
@@ -57,9 +78,12 @@
                 em tecnologias Back-end, como Python, assim como conhecimentos básicos em Banco 
                 de Dados MySQL.
             </p>
-            <a href="https://docs.google.com/uc?export=download&id=1-7eUcRELQJ4Oymzl3GkKq1NkIoXsXo41">
-                <input type="button" value="Baixar CV" class="botao-cv">
-            </a>
+            <div class="area-botoes">
+                <a href="https://docs.google.com/uc?export=download&id=1-7eUcRELQJ4Oymzl3GkKq1NkIoXsXo41" class="botao-cv">
+                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                    <div class="forcar-branco">Baixar CV</div>
+                </a>
+            </div>
         </article>
         <article class="secundario ordenar-1"><!--Inicio Conteudo secundario-->
             <img class="foto-perfil" src="img/foto-perfil.jpeg" alt="Michael Carlos Ferreira">
@@ -97,7 +121,8 @@
             <p>
                 Mais um projeto de aula para treinar Layouts com diversas 
                 colunas. Na aba home três colunas, na aba Brasil duas colunas
-                e na aba fotos uma coluna.
+                e na aba fotos uma coluna. Escrever mais conteúdo aqui.
+                Estou desenvolvendo muito mais.
             </p>
             <a href="projects/site-de-noticias/index.html" target="_blank">Acessar projeto</a>
         </article>
@@ -117,5 +142,15 @@
         <h4>Todos os Direitos Reservados</h4>
     </footer><!--Fim do Rodape-->
 
+    <!--Efeito do botão hamburguer-->
+    <script>
+        function clickMenu() {
+            if (navlist.style.display == 'block') {
+                navlist.style.display = 'none'
+            } else {
+                navlist.style.display = 'block'
+            }
+        }
+    </script>
 </body>
 </html>
