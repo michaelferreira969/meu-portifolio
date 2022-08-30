@@ -26,9 +26,9 @@
     <header id="topo">
         <h1>Portifólio Michael</h1>
         
-        <nav>
+        <nav id="nav">
             <!--ícone Hamburguer-->
-            <i class="fa-solid fa-bars hamburguer-icon" onclick="clickMenu()"></i>
+            <i class="fa-solid fa-bars hamburguer-icon"></i>
 
             <ul class="navlist">
                 <li><a href="#inicio">Início</a></li>
@@ -144,13 +144,17 @@
 
     <!--Efeito do botão hamburguer-->
     <script>
-        function clickMenu() {
-            if (navlist.style.display == 'block') {
-                navlist.style.display = 'none'
-            } else {
-                navlist.style.display = 'block'
+        const hamburguericon = document.getElementsByClassName('hamburguer-icon');
+        
+        
+        function toggleMenu() {
+            const navlist = document.getElementsById('nav');
+            navlist.classList.toggle('active') {
+
             }
         }
+        
+        hamburguericon.addEventListener('click', toggleMenu);
     </script>
 </body>
 </html>
