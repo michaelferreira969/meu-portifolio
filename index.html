@@ -27,13 +27,16 @@
         <h1>Portifólio Michael</h1>
         
         <nav id="nav">
-            <!--ícone Hamburguer-->
-            <i class="fa-solid fa-bars hamburguer-icon"></i>
 
-            <ul class="navlist">
+            <!--Botao Mobile com atributos para leitores de tela-->
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                <span id="hamburger"></span>
+            </button>   
+
+            <ul id="menu" role="menu">
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
+                <li class="ultima"><a href="#projetos">Projetos</a></li>
             </ul>
 
         </nav>
@@ -142,19 +145,7 @@
         <h4>Todos os Direitos Reservados</h4>
     </footer><!--Fim do Rodape-->
 
-    <!--Efeito do botão hamburguer-->
-    <script>
-        const hamburguericon = document.getElementsByClassName('hamburguer-icon');
-        
-        
-        function toggleMenu() {
-            const navlist = document.getElementsById('nav');
-            navlist.classList.toggle('active') {
-
-            }
-        }
-        
-        hamburguericon.addEventListener('click', toggleMenu);
-    </script>
+    <!--JavaScript-->
+    <script src="javascript/script.js"></script>
 </body>
 </html>
