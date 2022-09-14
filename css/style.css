@@ -6,97 +6,120 @@
 /*Geral*/
 body {
     font-family: 'Gill Sans', 'Trebuchet MS', sans-serif;
-    font-size: 16px;
-    background-color: black;
-    color: white;
-
     overflow-x: hidden;
 }
+
 a:link, a:visited {
     text-decoration: none;
-    color: white;
+    color: black;
 }
+
 h1 {
-    font-weight: 100;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.8);
+    display: inline;
 }
+
 h2 {
+    color: rgb(114, 167, 253);
     text-transform: uppercase;
     padding-top: 20px;
     font-weight: 100;
     letter-spacing: 2px;
 }
+
 h3 {
-    padding-top: 5px;
     font-weight: 100;
+    padding-top: 5px;
 }
+
 h4 {
-    padding-top: 5px;
     font-weight: 100;
+    font-size: 1.5em;
 }
+
+h5 {
+    text-align: center;
+    font-weight: 100;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
 p {
-    color: rgba(128, 128, 128, 0.897);
+    color: rgba(48, 48, 48, 0.897);
     line-height: 20px;
     text-align: justify;
 }
+
 abbr {
     text-decoration: none;
 }
 
+/*Lista de nav*/
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
 /*Cabeçalho*/
-header {
+header#topo {
     width: 100%;
     position: fixed;
 
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    
+    -webkit-box-pack: space-around;
+    -ms-flex-pack: space-around;
     justify-content: space-around;
-    
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    
-    padding: 10px 20px;
 
-    background: rgba(54, 231, 255, 0.1);
-    border-bottom: 2px solid rgb(0, 132, 150);
+    background: rgb(255, 255, 255);
+    box-shadow: 2px 0px 5px black;
 
     z-index: 10;
 }
 
-/*Navegação*/
-nav a:link, a:visited {
-    border-bottom: 1px solid rgba(54, 231, 255, 0);
-}
-nav a:hover {
-    border-bottom: 1px solid white;
+/*Logotipo em h1*/
+#logo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
-/*ícone hamburguer*/
+#logo i {
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(114, 167, 253);
+    padding: 10px;
+}
+
+/*Formatação do texto da ul*/
+nav#nav ul li {
+    font-size: 0.8em;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+/*Espaçamento dos links*/
+nav#nav ul li a {
+    letter-spacing: 1px;
+}
+
+/*Efeito dos links do nav*/
+nav#nav ul li a:hover {
+    color: rgb(132, 144, 255);
+    transition: all 0.6s;
+}
+
+/*Ocultar ícone hamburguer*/
 #btn-mobile {
     display: none;
 }
 
-nav ul {
-    list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-}
-nav ul li {
-    color: white;
-    padding: 10px 15px;
-}
-
-/*Seções*/
-section {
+/*Padrão das seções principais*/
+section.principal {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -104,17 +127,20 @@ section {
 
     /*Espaçamento das seções*/
     padding-top: 8%;
-    padding-bottom: 8%;
+    padding-bottom: 8%;    
 }
-.divisor {
-    margin: auto;
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    width: 400px;
-    text-indent: -3000px;
 
-    background: url(../img/icon-seta.png) no-repeat center; 
+/*Título do cabeçalho*/
+section.principal header h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+/*Parágrafo de subtitulo do cabeçalho*/
+section.principal header p {
+    text-align: center;
+    padding: 10px 20px 20px 20px;
+    margin-bottom: 60px;
 }
 
 /*Classes para alterar ordem*/
@@ -128,7 +154,7 @@ section {
     order: 3;
 }
 
-/*Seção Inicial*/
+/*Textos de apresentação da seção inicial*/
 section#inicio p.texto-apresentacao {
     text-align: left;
     text-transform: uppercase;
@@ -139,7 +165,7 @@ section#inicio p.texto-apresentacao {
 section#inicio strong {
     font-size: 2em;
     font-weight: 100;
-    color: rgb(54, 231, 255);
+    color: rgb(114, 167, 253);
 }
 
 /*Texto de Apresentação*/
@@ -155,52 +181,36 @@ section#inicio span {
     margin-bottom: 20px;
 }
 
-/*Botões do site*/
+/*Padrão de botões do site*/
 .area-botoes a {
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+
     border: 2px solid;
     border-radius: 10px;
     
     padding: 8px 10px;
     margin-right: 20px;
 }
-.area-botoes a:hover{
-    background-color: rgba(54, 231, 255, 0.1)
-}
 
-/*Para o texto ficar branco*/
-div.forcar-branco {
+/*Em linha Para os botões*/
+.inline {
     display: inline;
-    color: white !important;
 }
 
-/*Botão do Linkedin*/
+/*Cores para o botão do Linkedin*/
 a.linkedin {
     border-color: rgb(9, 97, 184);
+    background-color: rgb(9, 97, 184);
 }
 
-/*Efeito de cor no logotipo*/
-a.linkedin:hover {
-    color: rgb(9, 97, 184);
-}
-
-/*Botão do Github*/
+/*Cores para o botão do Github*/
 a.github {
     border-color: rgb(49, 0, 105);
+    background-color: rgb(49, 0, 105);
 }
 
-/*Efeito de cor no logotipo*/
-a.github:hover {
-    color: rgb(49, 0, 105);
-}
-
-/*Imagem destaque*/
-img.foto-programador {
-    border-right: 10px solid rgb(0, 132, 150);
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-}
-
-/*Seção Sobre*/
+/*Tamanho dos artigos*/
 section#sobre article.primario {
     width: 50%;
     min-width: 400px;
@@ -211,7 +221,18 @@ section#sobre article.secundario {
     text-align: center;
 }
 
-/*Area de botões*/
+/*Espaçamento do título da seção sobre*/
+section#sobre h2 {
+    margin: 20px 0px;
+}
+
+/*Parágrafo da seção sobre*/
+section#sobre p {
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+/*Posicionamento do botão de sobre*/
 section#sobre .area-botoes {
     text-align: left;
 
@@ -219,133 +240,272 @@ section#sobre .area-botoes {
     margin-top: 20px;
 }
 
-/*Imagem de perfil*/
-img.foto-perfil {
-    width: 90%;
-
-    -webkit-box-shadow: 2px 3px 8px rgba(54, 231, 255, 0.1);
-    box-shadow: 2px 3px 8px rgba(54, 231, 255, 0.1);
-
-    border-left: 5px solid rgba(54, 231, 255, 0.1);
-    opacity: 0.6;
+/*Sombreamento para a imagem de perfil*/
+section#sobre img.foto-perfil {
+    -webkit-box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
-/*Efeito na imagem de perfil*/
-img.foto-perfil:hover {
-    -webkit-transition-duration: 2s;
-    -o-transition-duration: 2s;
-    transition-duration: 2s;
-
-    -webkit-transition-timing-function: ease-in-out;
-    -o-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
-
-    border-left: 5px solid rgb(0, 132, 150);
-    opacity: 0.9;
-}
-
-/*Botão para baixar currículo*/
+/*Cores para o botão de baixar CV*/
 a.botao-cv {
-    border-color: rgb(0, 132, 150);
+    border-color: rgb(114, 167, 253);
+    background-color: rgb(114, 167, 253);
 }
 
-/*Efeito de cor no logotipo*/
-a.botao-cv:hover {
-    color: rgb(0, 132, 150);
+/*Espaçamento de habilidades*/
+section#habilidades {
+    padding-top: 5%;
+    padding-bottom: 0;  
+}
+
+/*Espaçamento do cabeçalho secundário*/
+section#habilidades header.cabecalho-secundario {
+    margin-top: 60px;
 }
 
 
-/*Seção Projetos*/
+/*Layout de habilidades*/
+section#habilidades section {
+    display: grid;
+    justify-content: center;
+    row-gap: 60px;
+}
+
+/*Blocos de habilidades*/
+section#habilidades .bloco {
+    text-align: center;
+}
+
+/*ìcone dentro do bloco*/
+section#habilidades .bloco i {
+    font-size: 3em;
+}
+
+/*Cor do icone HTML dentro do bloco*/
+.bloco i.fa-html5 {
+    color: rgb(229, 76, 33);
+}
+
+/*Cor do icone CSS dentro do bloco*/
+.bloco i.fa-css3-alt {
+    color: rgb(12, 115, 184);
+}
+
+/*Cor do icone JavaScript dentro do bloco*/
+.bloco i.fa-square-js {
+    color: rgb(229, 162, 40);
+}
+
+/*Cor do icone Bootstrap dentro do bloco*/
+.bloco i.fa-bootstrap {
+    color: rgb(86, 61, 124);
+}
+
+/*Cor do icone BD dentro do bloco*/
+.bloco i.fa-database {
+    color: rgb(30, 76, 104);
+}
+
+/*Cor do icone POO dentro do bloco*/
+.bloco .fa-earth-americas {
+    color: rgb(190, 0, 0);
+}
+
+/*Blocos de habilidades*/
+section#habilidades .bloco h3 {
+    margin: 10px;
+}
+
+/*Alinhamento do parágrafo dentro do bloco*/
+.bloco p {
+    text-align: center;
+}  
+
+/*Seção projetos*/
 section#projetos {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack:first baseline;
-    -ms-flex-pack:first baseline;
-    justify-content: space-around;
-
-    padding-bottom: 50px;
+    padding-top: 5%;
 }
 
-/*Blocos de projetos*/
-section#projetos article {
-    background: rgba(92, 92, 92, 0.4);
-    -webkit-box-shadow: 2px 3px 10px rgba(54, 231, 255, 0.1);
-    box-shadow: 2px 3px 10px rgba(54, 231, 255, 0.1);
+/*Layout do container de projetos*/
+.container-projetos {
+    display: grid;
+    align-items: center;
+    width: 95%;
+}
 
-    width: 45%;
-    min-width: 400px;
+/*Layout dos blocos de projetos*/
+section#projetos article.bloco {
+    height: 500px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 
     text-align: center;
-    margin-bottom: 20px;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    align-items: center;
 }
 
-section#projetos article a {
-    display: inline-block;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-section#projetos article a:hover {
-    text-decoration: underline;
-}
-
-/*Parágrafos dos blocos de projetos*/
-section#projetos article p {
+/*Alinhar parágrafos e limitar tamanho*/
+section#projetos article.bloco p {
+    text-align: justify;
+    text-align-last: center;
     width: 80%;
     margin: 0 auto;
-    text-align-last: center;
 }
 
 /*Imagem dos blocos de projetos*/
 section#projetos article img {
-    border-radius: 30px;
+    border-radius: 40px;
+    border: 2px outset black;
 
     width: 90%;
 
-    padding: 10px;
-    margin: 10px;
+    margin: 0 auto;
 }
 
-article.em-breve a {
-    color: rgb(185, 0, 0);
-    cursor: default;
+/*Espaçamento da área de botões*/
+section#projetos .area-botoes {
+    padding: 10px;
 }
-article.em-breve span {
-    color: rgb(185, 0, 0);
+
+/*Botoes de projetos*/
+.area-botoes a.btn-projeto {
+    font-size: 0.8em;
+    color: rgb(114, 167, 253);
+    border-color: rgb(114, 167, 253);
+
+    margin: 0;
+}
+
+/*Efeito projeto em desenvolvimento*/
+article.bloco span.em-breve {
+    color: rgb(238, 0, 0);
     font-size: 0.7em;
     text-transform: uppercase;
+}
 
+.area-botoes a.btn-default {
+    color: rgba(236, 0, 0, 0.6);
+    border-color: rgba(236, 0, 0, 0.6);
+    cursor: default;
+}
+
+/*Espaçamento da seção contato*/
+section#contato {
+    padding-top: 5%;
+    
     display: block;
 }
 
-/*Efeito de salto da imagem*/
-img.zoom {
-    overflow: hidden;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+/*COntainer de blocos*/
+.container-contato {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
-img.zoom:hover {
-    -webkit-transform: scale(1.1);    
-    -ms-transform: scale(1.1);    
-    transform: scale(1.1);
+
+/*Blocos de contato*/
+.container-contato article.bloco {
+    text-align: center;
+    border: 2px solid;
+    border-radius: 10px;
+    
+    padding: 10px;
+    margin: 5px;
+}
+
+/*Blocos de contato*/
+section#contato .container-contato article.bloco {
+    width: 200px;
+}
+
+/*Tamanho do titulo e icone do bloco*/
+section#contato h3 {
+    font-size: 2em;
+}
+
+/*Cor da borda do bloco de email*/
+.container-contato article.bloco-email {
+    border-color: rgb(193, 58, 42);
+}
+
+/*Cor da borda do bloco de telefone*/
+.container-contato article.bloco-tel {
+    border-color: rgb(5, 82, 159);
+}
+
+/*Cor da borda do bloco de whatsapp*/
+.container-contato article.bloco-whats {
+    border-color: rgb(75, 200, 92);
+}
+
+/*Links do bloco de contato*/
+.container-contato article.bloco a {
+    color: rgb(114, 167, 253);
 }
 
 /*Rodape*/
-footer {
-    background: url(../img/fundo-rodape.png) no-repeat top center;
-    width: 100%;
+footer#rodape {
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+
+    padding: 40px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+/*Centralizar título redes sociais do rodapé*/
+footer#rodape .secundario h4 {
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 40px;
+}
+
+/*Icones redes sociais do rodapé*/
+footer#rodape .secundario i {
+    color: white;
+    font-size: 2em;
+}
+
+.nav-footer ul li {
+    margin: 0 10px;
 }
 
 /*Telas que tenham até 575.98px*/
 @media (max-width: 575.98px) {
+    /*Tamanho do título principal*/
     h1 {
         font-size: 1.3em;
+    }
+
+    /*Títulos das seções*/
+    h2 {
+        font-size: 2em;
+    }
+
+    /*Títulos dos artigos*/
+    h3 {
+        font-size: 1.5em;
+    }
+
+    /*Alterar distribuição do cabeçalho*/
+    header#topo {
+        -webkit-box-pack: space-between;
+        -ms-flex-pack: space-between;
+        justify-content: space-between;
+
+    }
+
+    /*Espaçamento do botão de nav*/
+    nav#nav {
+        padding: 10px;
+    }
+
+    /*Ocultar lista de nav*/
+    nav#nav ul {
+        display: none;
     }
 
     /*Botão mobile*/
@@ -363,14 +523,15 @@ footer {
 
         /*Ficar por cima dos elementos*/
         position: absolute;
-        width: 100%;
-
-        background: rgba(54, 231, 255, 0.7);
+        width: 80%;
+        height: 100vh;
 
         /*Afastar do cabeçalho*/
-        top: 45px;
+        top: 0px;
         left: 0px;
         
+        margin: 0px;
+
         z-index: 1000;
 
         overflow-y: hidden;
@@ -380,22 +541,21 @@ footer {
     #nav.active #menu {
         display: block;
         overflow-y: auto;
-    }    
 
+        background: rgba(0, 0, 0, 0.9);
+
+        padding-top: 30px;
+    }    
+    
     /*Quando nav estiver ativa*/
     #nav.active ul#menu li {
-        text-align: center;
-        border-bottom: 1px solid rgba(54, 231, 255, 0.1);
+        text-align: left;
+        padding: 30px;
     }
 
-    /*A ultima li*/
-    #nav.active ul#menu li.ultima {
-        border-bottom: 2px solid rgb(0, 132, 150);
-    }
-
-    /*Efeito ao passar o mouse na li*/
-    #nav.active ul#menu li:hover {
-        background: rgba(54, 231, 255, 0.1);
+    /*Cor dos links quando nav estiver ativa*/
+    #nav.active a:link, #nav.active a:visited {
+        color: white;
     }
 
     /*Tirando efeito do link ao passar o mouse*/
@@ -408,7 +568,7 @@ footer {
         /*Linha para hamburger*/
         border-top: 2px solid;
         width: 20px;
-        color: white;
+        color: rgb(0, 0, 0);
 
         display: block;
     }
@@ -451,58 +611,87 @@ footer {
         /*Posicionar mais acima*/
         top: -7px;
     }
-    /*
 
-    #menu a {
-    padding: 1rem 0;
-    margin: 0 1rem;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-    }
-    
-    
- */
-    
-    /*Alinhamento Texto Principal*/
+    /*Alinhamento dos itens*/
     section#inicio {
         padding-top: 60px;
         justify-content: center;
     }
+
+    /*Ocultar imagem de capa*/
+    section#inicio .secundario img {
+        display: none;
+    }
+
+    /*Alinhamento e tamanho do texto de apresentação*/
     section#inicio p.texto-apresentacao {
         text-align: center;
-
         font-size: 1.2em;
     }
 
-    /*Ocultar imagem capa*/
-    img.foto-programador {
-        display: none;
+    /*Tamnho do primeiro article na seção sobre*/
+    section#sobre article.primario {
+        width: 100%;
+        padding: 8px;
     }
+
+    /*Diminuir tamanho da imagem de perfil*/
+    section#sobre article.secundario img {
+        width: 90%;
+    }    
     
     /*Alterar tamanho dos botões*/
     .area-botoes a {
         font-size: 0.8em;
     }
 
-    /*Ocultar divisor*/
-    .divisor {
-        display: none;
-    }
-
     /*Tamanho do parágrafo*/
     section#sobre article.primario {
-        min-width: 300px;
+        min-width: 90%;
     }
 
-    /*Bloco de projetos*/
-    section#projetos article {
-        min-width: 360px;
+    /*Layout de habilidades*/
+    section#habilidades section {
+        grid-template-columns: 90%;
+        row-gap: 20px;
+    }
+
+    /*Layout do container de projetos*/
+    .container-projetos {
+        row-gap: 20px;
+    }
+    
+    /*Distribuição do rodape*/
+    footer#rodape {
+        justify-content: center;
+    }
+
+    /*Espaçamento entre o primario e o secundário*/
+    footer#rodape .secundario {
+        margin-top: 20px;
+    }
+
+    /*Espaçamento entre o secundário e nav*/
+    .nav-footer {
+        margin-top: 10px;   
     }
 }
 
 /*Telas que tenham de 576px até 767.98px*/
 @media (min-width: 576px) and (max-width: 767.98px) {
+    /*Título principal de logo*/
     h1 {
+        font-size: 1em;
+    }
+
+    /*Títulos das seções*/
+    h2 {
         font-size: 1.7em;
+    }
+
+    /*Títulos dos artigos*/
+    h3 {
+        font-size: 1.5em;
     }
     
     /*Alinhamento Texto Principal*/
@@ -515,33 +704,264 @@ footer {
     section#sobre article.primario {
         width: 560px;
     }
+
+    /*Layout de habilidades*/
+    section#habilidades section.primario {
+        grid-template-columns: 40% 40%;
+        grid-template-rows: auto auto auto;
+        column-gap: 20px;
+        row-gap: 30px;
+    }
+
+    /*Reduzir tamanho do título dentro dos blocos*/
+    section#habilidades section h3 {
+        font-size: 1.4em;
+    }
+
+    /*Limitar area dos parágrafos dentro dos blocos*/
+    section#habilidades section.secundario p {
+        width: 400px;
+    }
+
+    /*Layout do container de projetos*/
+    .container-projetos {
+        row-gap: 20px;
+    }
+
+    /*Alterar tamanho dos blocos de projetos*/
+    section#projetos article.bloco {
+        height: 560px;
+    }
+
+    /*Espaçamento entre o primario e o secundário*/
+    footer#rodape .secundario {
+        margin-top: 30px;
+    }
+
+    /*Espaçamento entre o secundário e nav*/
+    .nav-footer {
+        margin-top: 10px;   
+    }
 }
 
 /*Telas que tenham de 766px até 991.98px*/
 @media (min-width: 768px) and (max-width: 991.98px) {
+    /*Título principal de logo*/
+    h1 {
+        font-size: 1.7em;
+    }
+
+    /*Títulos das seções*/
+    h2 {
+        font-size: 1.9em;
+    }
+
+    /*Títulos dos artigos*/
+    h3 {
+        font-size: 1.7em;
+    }
+
     /*Alinhamento Texto Principal*/
     section#inicio p.texto-apresentacao {
         text-align: center;
     }
 
-    /*Tamanhos blocos de projetos*/
-    section#projetos article {
-        /* background: rgba(102, 0, 0, 0.4); */
-        width: 80%;    
+    /*Layout da seção primaria de habilidades*/
+    section#habilidades section.primario {
+        grid-template-columns: 40% 40%;
+        grid-template-rows: auto auto auto;
+        column-gap: 30px;
+    }
+
+    /*Layout da seção secundaria de habilidades*/
+    section#habilidades section.secundario {
+        grid-template-columns: 30% 30% 30%;
+        column-gap: 20px;
+    }
+
+    /*Layout do container de projetos*/
+    .container-projetos {
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+    }
+
+    /*Blocos de contato*/
+    section#contato .container-contato article.bloco {
+        width: 200px;
+    }
+
+    /*Tamanho do titulo e icone do bloco*/
+    section#contato h3 {
+        font-size: 2em;
     }
 }
 
 /*Telas que tenham de 992px até 1199.98px*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
+    /*Título principal de logo*/
+    h1 {
+        font-size: 1.7em;
+    }
+
+    /*Títulos das seções*/
+    h2 {
+        font-size: 1.9em;
+    }
+
+    /*Títulos dos artigos*/
+    h3 {
+        font-size: 1.7em;
+    }
+
+    /*Título do rodapé*/
+    h4 {
+        font-size: 1.7em;
+    }
+    
+    /*Subtítulo do rodapé*/
+    h5 {
+        font-size: 1.2em;
+    }
+
+    /*Cor de fundo e transição dos botões*/
+    .area-botoes a:hover {
+        background-color: rgb(255, 255, 255);
+        transition: all 1s;
+    }
+
+    /*Cor dos textos ao passar o mouse*/
+    a.linkedin:hover {
+        color: rgb(9, 97, 184);
+    }
+
+    /*Cor dos textos ao passar o mouse*/
+    a.github:hover {
+        color: rgb(49, 0, 105);
+    }     
+
+    /*Cor dos textos ao passar o mouse*/
+    a.botao-cv:hover {
+        color: rgb(114, 167, 253);
+    }
+    
     article.em-breve span {
         display: inline;
+    }
+
+    /*Layout da seção de habilidades*/
+    section#habilidades section {
+        grid-template-columns: 30% 30% 30%;
+        grid-template-rows: auto auto;
+        column-gap: 30px;
+    }
+
+    /*Layout do container de projetos*/
+    .container-projetos {
+        grid-template-columns: auto auto;
+        grid-gap: 30px;
+    }
+
+    /*Ao passar o mouse por botoes de projetos*/
+    section#projetos article.bloco a:hover {
+        color: white;
+        background-color: rgb(114, 167, 253);
+    }
+
+    /*Efeito de salto da imagem*/
+    img.zoom {
+        overflow: hidden;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    img.zoom:hover {
+        -webkit-transform: scale(1.1);    
+        -ms-transform: scale(1.1);    
+        transform: scale(1.1);
+    }
+
+    /*Cor do icone email ao passar o mouse*/
+    section#contato .container-contato h3:hover .fa-envelope {
+        color: rgb(193, 58, 42);
+    }
+
+    /*Cor do icone telefone ao passar o mouse*/
+    section#contato .container-contato h3:hover .fa-phone {
+        color: rgb(5, 82, 159);
+    }
+
+    /*Cor do icone whatsapp ao passar o mouse*/
+    section#contato .container-contato h3:hover .fa-square-whatsapp {
+        color: rgb(75, 200, 92);
+    }
+
+    /*Blocos de contato*/
+    section#contato .container-contato article.bloco {
+        width: 290px;
+    }
+
+    /*Tamanho do titulo e icone do bloco*/
+    section#contato h3 {
+        font-size: 2.5em;
+    }
+
+    /*Links do bloco de contato*/
+    .container-contato article.bloco a:hover {
+        text-decoration: underline;
     }
 }
 
 /*Telas que tenham de 1200px pra cima*/
 @media (min-width: 1200px) {
+    /*Título principal de logo*/
+    h1 {
+        font-size: 2em;
+    }
+
+    /*Títulos das seções*/
+    h2 {
+        font-size: 1.9em;
+    }
+
+    /*Títulos dos artigos*/
+    h3 {
+        font-size: 1.7em;
+    }
+
+    /*Título do rodapé*/
+    h4 {
+        font-size: 2em;
+    }
+    
+    /*Subtítulo do rodapé*/
+    h5 {
+        font-size: 1.5em;
+    }
+
+    /*Limitar tamanho do container principal*/
+    #container {
+        width: 1100px;
+        margin: 0 auto;
+        border: 1px solid red;
+    }
+
+    /*Alterar alimnhamento do cabeçalho*/
     header {
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-around;
+    }
+
+    /*Lista de nav*/
+    nav ul {
+        display: flex;
+    }
+    nav ul li {
+        color: white;
+        font-size: 0.8em;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 10px 15px;
     }
 
     /*Espaçaento da seção inicio*/
@@ -549,11 +969,135 @@ footer {
         padding-top: 10%;
     }
 
-    nav ul {
-        margin-right: 150px;
+    /*Cor de fundo e transição dos botões*/
+    .area-botoes a:hover {
+        background-color: rgb(255, 255, 255);
+        transition: all 1s;
     }
 
+    /*Cor dos textos ao passar o mouse*/
+    a.linkedin:hover {
+        color: rgb(9, 97, 184);
+    }
+
+    /*Cor dos textos ao passar o mouse*/
+    a.github:hover {
+        color: rgb(49, 0, 105);
+    }    
+
+    /*Cor dos textos ao passar o mouse*/
+    a.botao-cv:hover {
+        color: rgb(114, 167, 253);
+    }
+    
     article.em-breve span {
         display: inline;
+    }
+
+    /*Container da imagem de perfil para gerar efeito*/
+    .container-zoom {
+        overflow: hidden;
+        display: inline-block;
+
+        background-color: rgb(114, 167, 253);
+
+        -webkit-box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.5);
+        box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    /*Imagem de perfil*/
+    img.foto-perfil {
+
+        /*Para gerar efeito de zoom*/
+        max-width: 100%;
+        -webkit-transition-duration: 0.6s;
+        -o-transition-duration: 0.6s;
+        transition-duration: 0.6s;
+    }
+
+    /*Efeito na imagem de perfil para efeito de zoom*/
+    img.foto-perfil:hover {
+        -webkit-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+
+        transform: scale(1.1);
+    }
+
+    /*Layout de habilidades*/
+    section#habilidades section {
+        grid-template-columns: 25% 25% 25%;
+        grid-template-rows: auto auto;
+        column-gap: 60px;
+    }
+
+    /*Layout do container de projetos*/
+    .container-projetos {
+        grid-template-columns: auto auto;
+        grid-gap: 50px;
+    }
+
+    /*Ao passar o mouse por botoes de projetos*/
+    section#projetos article.bloco a:hover {
+        color: white;
+        background-color: rgb(114, 167, 253);
+    }
+
+    section#projetos article.bloco a.btn-default:hover {
+        color: rgba(238, 0, 0, 0.6);
+        background-color: white;
+    }
+
+    /*Efeito de salto da imagem*/
+    img.zoom {
+        overflow: hidden;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    img.zoom:hover {
+        -webkit-transform: scale(1.1);    
+        -ms-transform: scale(1.1);    
+        transform: scale(1.1);
+    }
+
+    /*Cor do icone email ao passar o mouse*/
+    section#contato .container-contato h3:hover .fa-envelope {
+        color: rgb(193, 58, 42);
+    }
+
+    /*Cor do icone telefone ao passar o mouse*/
+    section#contato .container-contato h3:hover .fa-phone {
+        color: rgb(5, 82, 159);
+    }
+
+    /*Cor do icone whatsapp ao passar o mouse*/
+    section#contato .container-contato h3:hover .fa-square-whatsapp {
+        color: rgb(75, 200, 92);
+    }
+
+    /*Blocos de contato*/
+    section#contato .container-contato article.bloco {
+        width: 360px;
+    }
+
+    /*Tamanho do titulo e icone do bloco*/
+    section#contato h3 {
+        font-size: 3em;
+    }
+
+    /*Links do bloco de contato*/
+    .container-contato article.bloco a:hover {
+        text-decoration: underline;
+    }
+
+    /*Tamanho dos icones redes sociais do rodapé*/
+    footer#rodape .secundario i {
+        font-size: 3em;
+    }
+
+    /*Efeitos do icone redes sociais do rodapé*/
+    footer#rodape .secundario i:hover {
+        color: rgb(114, 167, 253);
     }
 }

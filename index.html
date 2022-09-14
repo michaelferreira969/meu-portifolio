@@ -20,28 +20,30 @@
     <!--Ícones Font Awesome-->
     <script src="https://kit.fontawesome.com/68c1cffbc5.js" crossorigin="anonymous"></script>
 
-    <title>Michael Ferreira</title>
+    <title>Michael Ferreira - Portifólio</title>
 </head>
 <body>
     <header id="topo">
-        <h1>Portifólio Michael</h1>
-        
+        <div id="logo">
+            <img src="img/m-logo-azul.png" alt="M">
+            <h1>Portifólio Michael</h1>
+        </div>
+    
         <nav id="nav">
-
             <!--Botao Mobile com atributos para leitores de tela-->
             <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
                 <span id="hamburger"></span>
-            </button>   
-
+            </button>
             <ul id="menu" role="menu">
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li class="ultima"><a href="#projetos">Projetos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
-
         </nav>
     </header>
-    <section id="inicio"><!--Inicio da seção Inicial-->
+    <section id="inicio" class="principal"><!--Inicio da seção Inicial-->
         <article class="primario"><!--Inicio Conteudo primario-->
             <p class="texto-apresentacao">
                 <span>Olá, eu sou</span>
@@ -52,97 +54,292 @@
             <div class="area-botoes">
                 <a href="https://linkedin.com/in/michaelferreira969/" class="linkedin" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>
-                    <div class="forcar-branco">LinkedIn</div>
+                    <div class="inline">LinkedIn</div>
                     <!-- <input type="button" value="LinkedIn"> -->
                 </a>
                 <a href="https://github.com/michaelferreira969" class="github" target="_blank">
                     <i class="fa-brands fa-github"></i>
-                    <div class="forcar-branco">Github</div>
+                    <div class="inline">Github</div>
                 </a>
             </div>
         </article><!--Fim Conteudo primario-->
         <article class="secundario"><!--Inicio Conteudo secundario-->
-            <img class="foto-programador" src="img/programador.png" alt="Programador">
+            <img src="img/capa-michael.png" alt="Michael">
         </article><!--Fim Conteudo secundario-->
     </section><!--Fim de Início-->
-    <a href="#sobre">
-        <div class="divisor">Scroll Down</div>
-    </a>
-    <section id="sobre">
+
+    <section id="sobre" class="principal"><!--Início de sobre-->
         <article class="primario ordenar-2">
             <h2>Sobre Mim</h2>
             <p>
-                Olá, estou cursando Ciências da Computação. Na faculdade me identifiquei 
-                com desenvolvimento web, porém, por conta do meu antigo emprego, deixei um
-                pouco de lado. Mas no ínicio de 2022 voltei a buscar aprimoramento na área.
-                Tenho conhecimentos avançados em <abbr title="HyperText Markup Language">HTML</abbr>
-                e <abbr title="Cascading Style Sheets">CSS</abbr>. Focado em
-                me aprimorar na programação Front-end, mas, possuo conhecimento intermediário 
-                em tecnologias Back-end, como Python, assim como conhecimentos básicos em Banco 
-                de Dados MySQL.
+                Olá, estou cursando Ciências da Computação. Na faculdade me identifiquei
+                com desenvolvimento web. Porém, por conta do meu antigo emprego, deixei a 
+                área de lado por um tempo, mas sem deixar de desenvolver e praticar. Até 
+                que no ínicio de 2022 decidi buscar uma oportunidade como desenvolvedor 
+                Front-end.
+            </p>
+            <p>     
+                Com o retorno a área senti a necessidade de aprimoramento. Na busca, comprei
+                um curso de desenvolvimento web completo, no qual tenho me capacitado cada
+                vez mais. Hoje, espero uma oportunidade para desenvolver-me ainda mais e cooperar com
+                a empresa para desenvolvimento de sites de qualidade.
             </p>
             <div class="area-botoes">
                 <a href="https://docs.google.com/uc?export=download&id=1-7eUcRELQJ4Oymzl3GkKq1NkIoXsXo41" class="botao-cv">
                     <i class="fa-solid fa-cloud-arrow-down"></i>
-                    <div class="forcar-branco">Baixar CV</div>
+                    <div class="inline">Baixar CV</div>
                 </a>
             </div>
         </article>
         <article class="secundario ordenar-1"><!--Inicio Conteudo secundario-->
-            <img class="foto-perfil" src="img/foto-perfil.jpeg" alt="Michael Carlos Ferreira">
+            <div class="container-zoom"><img class="foto-perfil" src="img/foto-perfil.jpeg" alt="Michael Carlos Ferreira"></div>
         </article><!--Fim Conteudo secundario-->
-    </section>
-    <a href="#projetos">
-        <div class="divisor">Scroll Down</div>
-    </a>
-    <section id="projetos">
-        <article>
-            <h2>Projeto - Museu Nacional</h2>
-            <img src="img/print-museu.png" alt="Print Museu Nacional" class="zoom">
+    </section><!--Fim de Sobre-->
+
+    <section id="habilidades" class="principal"><!--Início de habilidades-->
+        
+        <header class="cabecalho-primario">
+            <h2>Habilidades Técnicas</h2>
             <p>
-                Um projeto acadêmico desenvolvido em aula com o principal
-                objetivo de desenvolver um site com às novas tags HTML5. 
-                Utilizei iframes e um pequeno formulário. Apliquei o normalize 
-                CSS e utilizo flutuação para criar o layout do site.
+                Uma breve descrição de minhas habilidades técnicas, as famosas
+                Hard Skills.
             </p>
-            <a href="projects/site-museu-nacional/index.html" target="_blank">Acessar projeto</a>
-        </article>
-        <article>
-            <h2>Projeto - TecBlog</h2>
-            <img src="img/print-tecblog.png" alt="Print TecBlog" class="zoom">
+        </header>
+
+        <section class="primario"><!--Inicio Conteudo primario-->
+            <article class="bloco">
+                <i class="fa-brands fa-html5"></i>
+                <h3><abbr title="HyperText Markup Language">HTML</abbr></h3>
+                <p>
+                    Estou por dentro das novas tags vindas do HTML 5, e procuro desenvolver
+                    sites que prezam pela questão da semântica.
+                </p>
+            </article>
+            <article class="bloco">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h3><abbr title="Cascading Style Sheets">CSS</abbr></h3>
+                <p>
+                    Conhecimentos para fazer estilização completa de uma página web, dês de
+                    cores, tipografia, etc, a layouts responsivos.
+                </p>
+            </article>
+            <article class="bloco">
+                <i class="fa-brands fa-square-js"></i>
+                <h3>JavaScript</h3>
+                <p>
+                    Por conta da excelente base em programação sei utilizar o JavaScript muito bem,
+                    mas estou me aprimorando para desenvolvimento de páginas web dinâmicas. 
+                </p>
+            </article>
+            <article class="bloco">
+                <i class="fa-brands fa-bootstrap"></i>
+                <h3>Bootstrap</h3>
+                <p>
+                    Um framework que aprendi este ano, mas já consigo utilizá-lo sem muitas dificuldades,
+                    criando assim, sites responsivos de forma rapida e simples.           
+                </p>
+            </article>
+            <article class="bloco">
+                <i class="fa-solid fa-database"></i>
+                <h3>MySQL</h3>
+                <p>
+                    Tenho um conhecimento básico em Banco de Dados. Na faculdade tenho desenvolvido cada
+                    vez mais habilidades em MySQL. 
+                </p>
+            </article>
+            <article class="bloco">
+                <i class="fa-solid fa-earth-americas"></i>
+                <h3>Orientação a Objetos</h3>
+                <p>
+                    Sólido conhecimento nesse paradigma de programação, por isso posso programar tanto em 
+                    Python quanto em JavaScript.  
+                </p>
+            </article>
+        </section><!--Fim Conteudo primario-->
+
+        <header class="cabecalho-secundario">
+            <h2>Habilidades Comportamentais</h2>
             <p>
-                Um dos primeiros projetos de aula. O objetivo era criar um 
-                barra de menu, e um layout de duas colunas. Como era um projeto
-                iniciante não utilizei novas tags do HTML5, ou novas propriedas
-                do CSS3. Utilizo Flutuação no layout.
+                Uma breve descrição de minhas habilidades comportamentais, as famosas
+                Soft Skills.
             </p>
-            <a href="projects/site-tecblog/index.html" target="_blank">Acessar projeto</a>
-        </article>
-        <article>
-            <h2>Projeto - Notícias Cidade</h2>
-            <img src="img/print-noticias-cidade.png" alt="Print Notícias Cidade" class="zoom">
+        </header>
+
+        <section class="secundario"><!--Inicio Conteudo secundario-->
+            <article class="bloco">
+                <i class="fa-solid fa-people-group"></i>
+                <h3>Trabalho em Equipe</h3>
+                <p>
+                    Não tenho problemas em cooperar com a equipe, trabalhando sempre
+                    para o desenvolvimento mútuo e o respeito entre todos.
+                </p>
+            </article>
+            <article class="bloco">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h3>Equilíbrio Emocional</h3>
+                <p>
+                    Me mantenho calmo diante de conflitos e problemas, não deixando ser
+                    levado pelas emoções.
+                </p>
+            </article>
+            <article class="bloco">
+                <i class="fa-solid fa-person-digging"></i>
+                <h3>Proatividade</h3>
+                <p>
+                    Busco sempre estar ativo e realizando atividades sem que me peçam.
+                    De olho nas atividades do dia e também nas tendências. 
+                </p>
+            </article>
+        </section><!--Fim Conteudo secundario-->
+
+    </section><!--Fim de habilidades-->
+
+    <section id="projetos" class="principal"><!--Inicio de projetos-->
+
+        <header class="cabecalho-primario">
+            <h2>Projetos</h2>
             <p>
-                Mais um projeto de aula para treinar Layouts com diversas 
-                colunas. Na aba home três colunas, na aba Brasil duas colunas
-                e na aba fotos uma coluna. Escrever mais conteúdo aqui.
-                Estou desenvolvendo muito mais.
+                Veja agora alguns projetos meus desenvolvidos principalmente em aula.
             </p>
-            <a href="projects/site-de-noticias/index.html" target="_blank">Acessar projeto</a>
-        </article>
-        <article class="em-breve"> 
-            <h2>Projeto - Site Nerd <span>(Em Desenvolvimento)</span></h2>
-            <img src="img/em-breve.png" alt="Em Breve" class="zoom">
+        </header>
+
+        <div class="container-projetos">
+            <article class="bloco">
+                <img src="img/print-museu.png" alt="Print Museu Nacional" class="zoom">
+                <h3>Museu Nacional</h3>
+                <p>
+                    Um projeto iniciante desenvolvido em aula com o principal
+                    objetivo de desenvolver um site com às novas tags HTML5.
+                    Utilizei iframes e um pequeno formulário. Apliquei o normalize
+                    CSS e utilizo flutuação para criar o layout do site. <em>Não responsivo.</em>
+                </p>
+                <div class="area-botoes">
+                    <a href="https://michaelferreira969.github.io/museu-nacional/" class="btn-projeto" target="_blank">Acessar projeto</a>
+                </div>
+            </article>
+
+            <article class="bloco">
+                <img src="img/print-noticias-nerd.png" alt="Print TecBlog" class="zoom">
+                <h3>Notícias Nerd</h3>
+                <p>
+                    Um projeto autoral, trabalhando com responsividade, elementos flex
+                    e outras mais propriedades do CSS. Usei imagens para aplicar um efeito
+                    diferente no cabeçalho da página, além de ter uma pequena demonstração 
+                    do efeito parallax. Utilizo o JavaScript para a criação do botão hamburger.
+                </p>
+                <div class="area-botoes">
+                    <a href="https://michaelferreira969.github.io/noticias-nerd/" class="btn-projeto" target="_blank">Acessar projeto</a>
+                </div>
+            </article>
+
+            <article class="bloco">
+                <img src="img/print-ale-modas.png" alt="Print Notícias Cidade" class="zoom">
+                <h3>Alê Modas</h3>
+                <p>
+                    Outro projeto autoral, porém, neste usei o Bootstrap. Utilizei efeito
+                    parallax e carrossel/slider de imagens, o que deixou o projeto com 
+                    um design muito profissional.
+                </p>
+                <div class="area-botoes">
+                    <a href="https://michaelferreira969.github.io/ale-modas/" class="btn-projeto" target="_blank">Acessar projeto</a>
+                </div>
+            </article>
+
+            <article class="bloco">
+                <img src="img/em-breve.png" alt="Print Notícias Cidade" class="zoom">
+                <h3>Oficina 1000ton</h3>
+                <p>
+                    Mais um projeto desenvolvido com Bootstrap e totalmente autoral.
+                    A ideia é um site de oficina profissional para demonstração do trabalho
+                    aos clientes. Além de usar JavaScript para dar mais dinamismo para o
+                    site. Responsivo.
+                </p>
+                <div class="area-botoes">
+                    <a href="https://michaelferreira969.github.io/1000ton/" class="btn-projeto" target="_blank">Acessar projeto</a>
+                </div>
+            </article>
+
+            <article class="bloco">
+                <img src="img/em-breve.png" alt="Print Notícias Cidade" class="zoom">
+                <h3>Site de Entretenimento</h3>
+                <p>
+                    Um projeto que na verdade é para aprimoramento das habilidades em
+                    HTML, CSS e JavaScript. Neste projeto copiei todo um site, dês de
+                    sua estrutura até suas imagens e cores. A ideia era realmente copiar
+                    até nos mínimos detalhes.
+                </p>
+                <div class="area-botoes">
+                    <a href="https://michaelferreira969.github.io/maiores-melhores/" class="btn-projeto" target="_blank">Acessar projeto</a>
+                </div>
+            </article>
+
+            <article class="bloco">
+                <img src="img/em-breve.png" alt="Em Breve" class="zoom">
+                <h3>JavaScript <span class="em-breve">(Em Desenvolvimento)</span></h3>
+                <p>
+                    Neste projeto quero demonstrar a utilização do JavaScript. 
+                </p>
+                <div class="area-botoes">
+                    <a href="#" class="btn-projeto btn-default" target="_blank">Acessar projeto</a>
+                </div>
+            </article>
+        </div>
+
+    </section><!--Fim de projetos-->
+
+    <section id="contato" class="principal"><!--Inicio de contato-->
+
+        <header class="cabecalho-primario">
+            <h2>Contato</h2>
             <p>
-                Com layout flexível, novas tags HTML5, efeito parallax, e 
-                muito mais para deixar o site moderno e atrativo. Um projeto
-                autoral para praticar e demonstrar conhecimento em CSS3 e HTML5.
+                Você pode entrar em contato comigo, de domingo a sexta-feira, por qualquer
+                um dos meios abaixo.
             </p>
-            <a href="#projetos">Link não disponível</a>
-        </article>
-    </section>
+        </header>
+
+        <div class="container-contato">
+            <article class="bloco bloco-email">
+                <h3>E-mail <i class="fa-solid fa-envelope"></i></h3>
+                <a href="mailto:michaelferrys969@gmail.com" class="link-contato" target="_blank">michaelferrys969@gmail.com</a>
+            </article>
+
+            <article class="bloco bloco-tel">
+                <h3>Telefone <i class="fa-solid fa-phone"></i></h3>
+                <a href="tel:11953695641" class="link-contato" target="_blank">(11) 95369-5641</a>
+            </article>
+
+            <article class="bloco bloco-whats">
+                <h3>Whatsapp <i class="fa-brands fa-square-whatsapp"></i></h3>
+                <a href="https://wa.me/5511953695641" class="link-contato" target="_blank">(11) 95369-5641</a>
+            </article>
+
+        </div>
+    </section><!--Fim de contato-->
+
     <footer id="rodape"><!--Inicio do Rodape-->
-        <h3>2022 - Michael Carlos Ferreira</h3>
-        <h4>Todos os Direitos Reservados</h4>
+        <div class="primario">
+            <h4>2022 - Michael Carlos Ferreira</h4>
+            <h5>Todos os Direitos Reservados</h5>
+        </div>
+        <div class="secundario">
+            <h4>Redes Sociais</h4>
+            <nav class="nav-footer">
+                <ul>
+                    <li>
+                        <a href="https://wa.me/5511953695641"><i class="fa-brands fa-whatsapp"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/invites/contact/?i=1dnw2j38wnbgf&utm_content=1g3bdkh"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="http://t.me/michaelferreira969"><i class="fa-brands fa-telegram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/michaelferreira969/"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </footer><!--Fim do Rodape-->
 
     <!--JavaScript-->
