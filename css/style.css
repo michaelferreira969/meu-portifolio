@@ -153,6 +153,9 @@ section.principal header p {
 .ordenar-3 {
     order: 3;
 }
+.order-4 {
+    order: 4;
+}
 
 /*Textos de apresentação da seção inicial*/
 section#inicio p.texto-apresentacao {
@@ -252,12 +255,6 @@ a.botao-cv {
     background-color: rgb(114, 167, 253);
 }
 
-/*Espaçamento de habilidades*/
-section#habilidades {
-    padding-top: 5%;
-    padding-bottom: 0;  
-}
-
 /*Espaçamento do cabeçalho secundário*/
 section#habilidades header.cabecalho-secundario {
     margin-top: 60px;
@@ -321,11 +318,6 @@ section#habilidades .bloco h3 {
     text-align: center;
 }  
 
-/*Seção projetos*/
-section#projetos {
-    padding-top: 5%;
-}
-
 /*Layout do container de projetos*/
 .container-projetos {
     display: grid;
@@ -354,8 +346,8 @@ section#projetos article.bloco p {
 
 /*Imagem dos blocos de projetos*/
 section#projetos article img {
-    border-radius: 40px;
-    border: 2px outset black;
+    border-radius: 20px;
+    border: 5px solid black;
 
     width: 90%;
 
@@ -370,8 +362,8 @@ section#projetos .area-botoes {
 /*Botoes de projetos*/
 .area-botoes a.btn-projeto {
     font-size: 0.8em;
-    color: rgb(114, 167, 253);
-    border-color: rgb(114, 167, 253);
+    color: rgb(187, 159, 0);
+    border-color: rgb(187, 159, 0);
 
     margin: 0;
 }
@@ -389,10 +381,8 @@ article.bloco span.em-breve {
     cursor: default;
 }
 
-/*Espaçamento da seção contato*/
+/*Layout da seção contato*/
 section#contato {
-    padding-top: 5%;
-    
     display: block;
 }
 
@@ -417,7 +407,7 @@ section#contato {
 
 /*Blocos de contato*/
 section#contato .container-contato article.bloco {
-    width: 200px;
+    width: 210px;
 }
 
 /*Tamanho do titulo e icone do bloco*/
@@ -459,12 +449,12 @@ footer#rodape {
 }
 
 /*Centralizar título redes sociais do rodapé*/
-footer#rodape .secundario h4 {
+footer#rodape .primario h4 {
     text-align: center;
 }
 
 /*Icones redes sociais do rodapé*/
-footer#rodape .secundario i {
+footer#rodape .primario i {
     color: white;
     font-size: 2em;
 }
@@ -667,13 +657,21 @@ footer#rodape .secundario i {
     }
 
     /*Espaçamento entre o primario e o secundário*/
-    footer#rodape .secundario {
-        margin-top: 20px;
+    footer#rodape .primario {
+        margin-top: 10px;
     }
 
-    /*Espaçamento entre o secundário e nav*/
+    /*Espaçamento entre nav e secundário*/
     .nav-footer {
-        margin-top: 10px;   
+        margin-bottom: 20px;   
+    }
+
+    /*Alterar ordem do rodapé*/
+    footer#rodape .order-4 {
+        order: 3;
+    }
+    footer#rodape .order-3 {
+        order: 4;
     }
 }
 
@@ -734,7 +732,7 @@ footer#rodape .secundario i {
     }
 
     /*Espaçamento entre o primario e o secundário*/
-    footer#rodape .secundario {
+    footer#rodape .primario {
         margin-top: 30px;
     }
 
@@ -864,7 +862,7 @@ footer#rodape .secundario i {
     /*Ao passar o mouse por botoes de projetos*/
     section#projetos article.bloco a:hover {
         color: white;
-        background-color: rgb(114, 167, 253);
+        background-color: rgb(187, 159, 0);
     }
 
     /*Efeito de salto da imagem*/
@@ -1024,12 +1022,23 @@ footer#rodape .secundario i {
         transform: scale(1.1);
     }
 
+    /*Espaçamento de habilidades*/
+    section#habilidades {
+        padding-top: 5%;
+        padding-bottom: 0;  
+    }
+
     /*Layout de habilidades*/
     section#habilidades section {
         grid-template-columns: 25% 25% 25%;
         grid-template-rows: auto auto;
         column-gap: 60px;
     }
+
+    /*Espaçamento da seção projetos*/
+    section#projetos {
+        padding-top: 5%;
+    }    
 
     /*Layout do container de projetos*/
     .container-projetos {
@@ -1040,7 +1049,7 @@ footer#rodape .secundario i {
     /*Ao passar o mouse por botoes de projetos*/
     section#projetos article.bloco a:hover {
         color: white;
-        background-color: rgb(114, 167, 253);
+        background-color: rgb(187, 159, 0);
     }
 
     section#projetos article.bloco a.btn-default:hover {
@@ -1059,6 +1068,11 @@ footer#rodape .secundario i {
         -webkit-transform: scale(1.1);    
         -ms-transform: scale(1.1);    
         transform: scale(1.1);
+    }
+
+    /*Espaçamento da seção contato*/
+    section#contato {
+        padding-top: 5%;
     }
 
     /*Cor do icone email ao passar o mouse*/
@@ -1092,12 +1106,12 @@ footer#rodape .secundario i {
     }
 
     /*Tamanho dos icones redes sociais do rodapé*/
-    footer#rodape .secundario i {
+    footer#rodape .primario i {
         font-size: 3em;
     }
 
     /*Efeitos do icone redes sociais do rodapé*/
-    footer#rodape .secundario i:hover {
+    footer#rodape .primario i:hover {
         color: rgb(114, 167, 253);
     }
 }
