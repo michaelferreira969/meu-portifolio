@@ -1,3 +1,20 @@
+/*Animação na imagem de capa*/
+@keyframes capa-aparecer {
+    from {
+        transform: translateX(calc(100vw - 360px));
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/*Animação nos ícones*/
+@keyframes animar-icones {
+    to {
+        transform: translatey(10px);
+    }
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -194,6 +211,8 @@ section#inicio span {
     
     padding: 8px 10px;
     margin-right: 20px;
+
+    transition: ease-in-out 0.8s;
 }
 
 /*Em linha Para os botões*/
@@ -276,6 +295,7 @@ section#habilidades .bloco {
 /*ìcone dentro do bloco*/
 section#habilidades .bloco i {
     font-size: 3em;
+    animation: animar-icones 1s ease-in-out alternate infinite;
 }
 
 /*Cor do icone HTML dentro do bloco*/
@@ -846,6 +866,11 @@ footer#rodape .primario i {
         display: inline;
     }
 
+    /*Animação da imagem de capa*/
+    #inicio .secundario img {
+        animation: capa-aparecer 1s;
+    }
+
     /*Layout da seção de habilidades*/
     section#habilidades section {
         grid-template-columns: 30% 30% 30%;
@@ -970,7 +995,6 @@ footer#rodape .primario i {
     /*Cor de fundo e transição dos botões*/
     .area-botoes a:hover {
         background-color: rgb(255, 255, 255);
-        transition: all 1s;
     }
 
     /*Cor dos textos ao passar o mouse*/
@@ -990,6 +1014,11 @@ footer#rodape .primario i {
     
     article.em-breve span {
         display: inline;
+    }
+
+    /*Animação da imagem de capa*/
+    #inicio .secundario img {
+        animation: capa-aparecer 1s;
     }
 
     /*Container da imagem de perfil para gerar efeito*/
