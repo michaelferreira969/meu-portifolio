@@ -25,3 +25,29 @@ btnMobile.addEventListener('click', toggleMenu);
 
 /*Para que ao clicar acione mais rápido*/
 btnMobile.addEventListener('touchstart', toggleMenu);
+
+/*Para acessar urls dos botões*/
+function acessarUrl(url) {
+    window.open(url, '_blank');
+}
+
+
+/*Alterar modo de cor do site*/
+function alterarModo() {
+    //Pegar elemento body
+    const body = document.getElementById('body');
+
+    //Pegar o nome da classe do elemento body
+    let modo = body.className;
+
+    //Se modo escuro alterar para claro
+    if (modo === 'dark') {
+        body.className = 'light';
+    } else if (modo === 'light') {
+        body.className = 'dark';
+    }
+}
+
+function identificarModo() {
+    document.getElementById('body').className;
+}

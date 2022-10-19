@@ -26,6 +26,10 @@ body {
     overflow-x: hidden;
 }
 
+body.dark {
+    background-color: black;
+}
+
 a:link, a:visited {
     text-decoration: none;
     color: black;
@@ -34,6 +38,12 @@ a:link, a:visited {
 h1 {
     font-weight: 900;
     color: rgba(0, 0, 0, 0.8);
+    display: inline;
+}
+
+body.dark h1 {
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.8);
     display: inline;
 }
 
@@ -202,7 +212,7 @@ section#inicio span {
 }
 
 /*Padrão de botões do site*/
-.area-botoes a {
+.area-botoes .btn {
     font-size: 1.2em;
     color: rgb(255, 255, 255);
 
@@ -230,6 +240,12 @@ a.linkedin {
 a.github {
     border-color: rgb(49, 0, 105);
     background-color: rgb(49, 0, 105);
+}
+
+/*Limitar tamanho dos parágrafos nos cabeçalhos*/
+header.cabecalho-primario p, header.cabecalho-secundario p {
+    width: 60%;
+    margin: 0 auto;
 }
 
 /*Tamanho dos artigos*/
@@ -324,8 +340,8 @@ section#habilidades .bloco i {
 }
 
 /*Cor do icone POO dentro do bloco*/
-.bloco .fa-earth-americas {
-    color: rgb(190, 0, 0);
+.bloco .fa-pencil {
+    color: rgb(61, 136, 0);
 }
 
 /*Blocos de habilidades*/
@@ -380,10 +396,13 @@ section#projetos .area-botoes {
 }
 
 /*Botoes de projetos*/
-.area-botoes a.btn-projeto {
+.area-botoes button.btn {
     font-size: 0.8em;
     color: rgb(187, 159, 0);
+    background-color: white;
     border-color: rgb(187, 159, 0);
+
+    cursor: pointer;
 
     margin: 0;
 }
@@ -395,7 +414,7 @@ article.bloco span.em-breve {
     text-transform: uppercase;
 }
 
-.area-botoes a.btn-default {
+.area-botoes button.btn-default {
     color: rgba(236, 0, 0, 0.6);
     border-color: rgba(236, 0, 0, 0.6);
     cursor: default;
@@ -651,7 +670,7 @@ footer#rodape .primario i {
     }    
     
     /*Alterar tamanho dos botões*/
-    .area-botoes a {
+    .area-botoes .btn {
         font-size: 0.8em;
     }
 
@@ -842,7 +861,7 @@ footer#rodape .primario i {
     }
 
     /*Cor de fundo e transição dos botões*/
-    .area-botoes a:hover {
+    .area-botoes .btn:hover {
         background-color: rgb(255, 255, 255);
         transition: all 1s;
     }
@@ -885,7 +904,7 @@ footer#rodape .primario i {
     }
 
     /*Ao passar o mouse por botoes de projetos*/
-    section#projetos article.bloco a:hover {
+    section#projetos article.bloco .btn:hover {
         color: white;
         background-color: rgb(187, 159, 0);
     }
@@ -993,7 +1012,7 @@ footer#rodape .primario i {
     }
 
     /*Cor de fundo e transição dos botões*/
-    .area-botoes a:hover {
+    .area-botoes .btn:hover {
         background-color: rgb(255, 255, 255);
     }
 
@@ -1076,12 +1095,12 @@ footer#rodape .primario i {
     }
 
     /*Ao passar o mouse por botoes de projetos*/
-    section#projetos article.bloco a:hover {
+    section#projetos article.bloco .btn:hover {
         color: white;
         background-color: rgb(187, 159, 0);
     }
 
-    section#projetos article.bloco a.btn-default:hover {
+    section#projetos article.bloco button.btn-default:hover {
         color: rgba(238, 0, 0, 0.6);
         background-color: white;
     }
