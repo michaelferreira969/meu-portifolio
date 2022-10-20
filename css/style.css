@@ -20,6 +20,21 @@
     padding: 0px;
 }
 
+/*Efeito de fundo nos blocos de contato*/
+@keyframes cores-bloco {
+    0% {
+        background-position: 0% 50%;
+    }
+    
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 /*Geral*/
 body {
     font-family: 'Gill Sans', 'Trebuchet MS', sans-serif;
@@ -27,12 +42,12 @@ body {
 }
 
 body.dark {
-    background-color: black;
+    /* background-color: #13293d; */
+    background-color: #181818;
 }
 
 a:link, a:visited {
     text-decoration: none;
-    color: black;
 }
 
 h1 {
@@ -43,7 +58,7 @@ h1 {
 
 body.dark h1 {
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgb(255, 255, 255);
     display: inline;
 }
 
@@ -107,17 +122,16 @@ header#topo {
     z-index: 10;
 }
 
+/*Cores modo dark*/
+body.dark header#topo {
+    background: #181818;
+    box-shadow: 2px 0px 5px black;
+}
+
 /*Logotipo em h1*/
 #logo {
     display: flex;
     align-items: center;
-    padding: 10px;
-}
-
-#logo i {
-    font-size: 1em;
-    font-weight: bold;
-    color: rgb(114, 167, 253);
     padding: 10px;
 }
 
@@ -131,7 +145,13 @@ nav#nav ul li {
 
 /*Espaçamento dos links*/
 nav#nav ul li a {
+    color: black;
     letter-spacing: 1px;
+}
+
+/*Cores modo dark*/
+body.dark nav#nav ul li a {
+    color: white;
 }
 
 /*Efeito dos links do nav*/
@@ -212,7 +232,7 @@ section#inicio span {
 }
 
 /*Padrão de botões do site*/
-.area-botoes .btn {
+.btn {
     font-size: 1.2em;
     color: rgb(255, 255, 255);
 
@@ -253,7 +273,7 @@ section#sobre article.primario {
     width: 50%;
     min-width: 400px;
 }
-section#sobre article.secundario {
+section#sobre .secundario {
     width: 30%;
     min-width: 400px;
     text-align: center;
@@ -312,6 +332,7 @@ section#habilidades .bloco {
 section#habilidades .bloco i {
     font-size: 3em;
     animation: animar-icones 1s ease-in-out alternate infinite;
+    filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.6));
 }
 
 /*Cor do icone HTML dentro do bloco*/
@@ -361,6 +382,11 @@ section#habilidades .bloco h3 {
     width: 95%;
 }
 
+/*Título de projetos*/
+section#projetos h3 {
+    color: #73641A;
+}
+
 /*Layout dos blocos de projetos*/
 section#projetos article.bloco {
     height: 500px;
@@ -383,7 +409,7 @@ section#projetos article.bloco p {
 /*Imagem dos blocos de projetos*/
 section#projetos article img {
     border-radius: 20px;
-    border: 5px solid black;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
 
     width: 90%;
 
@@ -398,9 +424,9 @@ section#projetos .area-botoes {
 /*Botoes de projetos*/
 .area-botoes button.btn {
     font-size: 0.8em;
-    color: rgb(187, 159, 0);
+    color: #BFA936;
     background-color: white;
-    border-color: rgb(187, 159, 0);
+    border-color: rgb(191, 168, 54);
 
     cursor: pointer;
 
@@ -435,18 +461,24 @@ section#contato {
 }
 
 /*Blocos de contato*/
-.container-contato article.bloco {
+.container-contato .bloco {
+    color: white;
     text-align: center;
-    border: 2px solid;
-    border-radius: 10px;
+    border-radius: 40px;
     
     padding: 10px;
     margin: 5px;
+
+    /*Animação*/
+    background: linear-gradient(45deg, #267373, #575757);
+    background-size: 140% 140%;
+    animation: cores-bloco 6s ease-in-out infinite;
 }
 
 /*Blocos de contato*/
-section#contato .container-contato article.bloco {
+section#contato .container-contato .bloco {
     width: 210px;
+    cursor: pointer;
 }
 
 /*Tamanho do titulo e icone do bloco*/
@@ -454,24 +486,9 @@ section#contato h3 {
     font-size: 2em;
 }
 
-/*Cor da borda do bloco de email*/
-.container-contato article.bloco-email {
-    border-color: rgb(193, 58, 42);
-}
-
-/*Cor da borda do bloco de telefone*/
-.container-contato article.bloco-tel {
-    border-color: rgb(5, 82, 159);
-}
-
-/*Cor da borda do bloco de whatsapp*/
-.container-contato article.bloco-whats {
-    border-color: rgb(75, 200, 92);
-}
-
 /*Links do bloco de contato*/
-.container-contato article.bloco a {
-    color: rgb(114, 167, 253);
+.container-contato .bloco a {
+    color: #BFA936;
 }
 
 /*Rodape*/
@@ -823,7 +840,7 @@ footer#rodape .primario i {
     }
 
     /*Blocos de contato*/
-    section#contato .container-contato article.bloco {
+    section#contato .container-contato .bloco {
         width: 200px;
     }
 
@@ -906,7 +923,7 @@ footer#rodape .primario i {
     /*Ao passar o mouse por botoes de projetos*/
     section#projetos article.bloco .btn:hover {
         color: white;
-        background-color: rgb(187, 159, 0);
+        background-color: #BFA936;
     }
 
     /*Efeito de salto da imagem*/
@@ -922,23 +939,8 @@ footer#rodape .primario i {
         transform: scale(1.1);
     }
 
-    /*Cor do icone email ao passar o mouse*/
-    section#contato .container-contato h3:hover .fa-envelope {
-        color: rgb(193, 58, 42);
-    }
-
-    /*Cor do icone telefone ao passar o mouse*/
-    section#contato .container-contato h3:hover .fa-phone {
-        color: rgb(5, 82, 159);
-    }
-
-    /*Cor do icone whatsapp ao passar o mouse*/
-    section#contato .container-contato h3:hover .fa-square-whatsapp {
-        color: rgb(75, 200, 92);
-    }
-
     /*Blocos de contato*/
-    section#contato .container-contato article.bloco {
+    section#contato .container-contato .bloco {
         width: 290px;
     }
 
@@ -948,7 +950,7 @@ footer#rodape .primario i {
     }
 
     /*Links do bloco de contato*/
-    .container-contato article.bloco a:hover {
+    .container-contato .bloco a:hover {
         text-decoration: underline;
     }
 }
@@ -1097,7 +1099,7 @@ footer#rodape .primario i {
     /*Ao passar o mouse por botoes de projetos*/
     section#projetos article.bloco .btn:hover {
         color: white;
-        background-color: rgb(187, 159, 0);
+        background-color: #BFA936;
     }
 
     section#projetos article.bloco button.btn-default:hover {
@@ -1123,23 +1125,8 @@ footer#rodape .primario i {
         padding-top: 5%;
     }
 
-    /*Cor do icone email ao passar o mouse*/
-    section#contato .container-contato h3:hover .fa-envelope {
-        color: rgb(193, 58, 42);
-    }
-
-    /*Cor do icone telefone ao passar o mouse*/
-    section#contato .container-contato h3:hover .fa-phone {
-        color: rgb(5, 82, 159);
-    }
-
-    /*Cor do icone whatsapp ao passar o mouse*/
-    section#contato .container-contato h3:hover .fa-square-whatsapp {
-        color: rgb(75, 200, 92);
-    }
-
     /*Blocos de contato*/
-    section#contato .container-contato article.bloco {
+    section#contato .container-contato .bloco {
         width: 360px;
     }
 
@@ -1149,7 +1136,7 @@ footer#rodape .primario i {
     }
 
     /*Links do bloco de contato*/
-    .container-contato article.bloco a:hover {
+    .container-contato .bloco a:hover {
         text-decoration: underline;
     }
 

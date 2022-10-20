@@ -44,7 +44,7 @@
         </nav>
     </header>
     <section id="inicio" class="principal"><!--Inicio da seção Inicial-->
-        <article class="primario"><!--Inicio Conteudo primario-->
+        <div class="primario"><!--Inicio Conteudo primario-->
             <p class="texto-apresentacao">
                 <span>Olá, eu sou</span>
                 <strong>Michael Ferreira</strong>
@@ -61,10 +61,10 @@
                     <div class="inline">Github</div>
                 </a>
             </div>
-        </article><!--Fim Conteudo primario-->
-        <article class="secundario"><!--Inicio Conteudo secundario-->
-            <img src="img/capa-michael.png" alt="Michael" width="360">
-        </article><!--Fim Conteudo secundario-->
+        </div><!--Fim Conteudo primario-->
+        <div class="secundario"><!--Inicio Conteudo secundario-->
+            <img id="img-capa" src="img/capa-michael.png" alt="Michael" width="360">
+        </div><!--Fim Conteudo secundario-->
     </section><!--Fim de Início-->
 
     <section id="sobre" class="principal"><!--Início de sobre-->
@@ -90,9 +90,9 @@
                 </a>
             </div>
         </article>
-        <article class="secundario ordenar-1"><!--Inicio Conteudo secundario-->
+        <div class="secundario ordenar-1"><!--Inicio Conteudo secundario-->
             <div class="container-zoom"><img class="foto-perfil" src="img/foto-perfil.jpeg" alt="Michael Carlos Ferreira"></div>
-        </article><!--Fim Conteudo secundario-->
+        </div><!--Fim Conteudo secundario-->
     </section><!--Fim de Sobre-->
 
     <section id="habilidades" class="principal"><!--Início de habilidades-->
@@ -315,20 +315,20 @@
         </header>
 
         <div class="container-contato">
-            <article class="bloco bloco-email">
+            <div class="bloco bloco-email" onclick="acessarUrl('mailto:michaelferrys969@gmail.com')">
                 <h3>E-mail <i class="fa-solid fa-envelope"></i></h3>
                 <a href="mailto:michaelferrys969@gmail.com" class="link-contato" target="_blank">michaelferrys969@gmail.com</a>
-            </article>
+            </div>
 
-            <article class="bloco bloco-tel">
+            <div class="bloco bloco-tel" onclick="acessarUrl('tel:11953695641')">
                 <h3>Telefone <i class="fa-solid fa-phone"></i></h3>
                 <a href="tel:11953695641" class="link-contato" target="_blank">(11) 95369-5641</a>
-            </article>
+            </div>
 
-            <article class="bloco bloco-whats">
+            <div class="bloco bloco-whats" onclick="acessarUrl('https://wa.me/5511953695641')">
                 <h3>Whatsapp <i class="fa-brands fa-square-whatsapp"></i></h3>
                 <a href="https://wa.me/5511953695641" class="link-contato" target="_blank">(11) 95369-5641</a>
-            </article>
+            </div>
 
         </div>
     </section><!--Fim de contato-->
