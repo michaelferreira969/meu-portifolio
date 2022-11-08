@@ -187,7 +187,7 @@ section.principal header h2 {
 section.principal header p {
     text-align: center;
     padding: 10px 20px 20px 20px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 /*Classes para alterar ordem*/
@@ -466,7 +466,7 @@ section#contato {
     text-align: center;
     border-radius: 40px;
     
-    padding: 10px;
+    padding: 20px;
     margin: 5px;
 
     /*Animação*/
