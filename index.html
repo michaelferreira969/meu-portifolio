@@ -20,6 +20,9 @@
     <!--Ícones Font Awesome-->
     <script src="https://kit.fontawesome.com/68c1cffbc5.js" crossorigin="anonymous"></script>
 
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
     <title>Michael Ferreira - Portifólio</title>
 </head>
 <body id="body" class="light">
@@ -48,15 +51,15 @@
             <p class="texto-apresentacao">
                 <span>Olá, eu sou</span>
                 <strong>Michael Ferreira</strong>
-                <span>desenvolvedor Front-end<span>
+                <span>desenvolvedor de soluções <span>
                 <br>
             </p>
             <div class="area-botoes">
-                <a href="https://linkedin.com/in/michaelferreira969/" class="btn linkedin" target="_blank">
+                <a href="https://linkedin.com/in/michaelferreira969/" class="btn linkedin" id="btn-linkedin" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>
                     <div class="inline">LinkedIn</div>
                 </a>
-                <a href="https://github.com/michaelferreira969" class="btn github" target="_blank">
+                <a href="https://github.com/michaelferreira969" class="btn github" id="btngithub" target="_blank">
                     <i class="fa-brands fa-github"></i>
                     <div class="inline">Github</div>
                 </a>
@@ -71,17 +74,24 @@
         <article class="primario ordenar-2">
             <h2>Sobre Mim</h2>
             <p>
-                Olá, estou cursando Ciências da Computação. Na faculdade me identifiquei
-                com desenvolvimento web. Porém, por conta do meu antigo emprego, deixei a 
-                área de lado por um tempo, mas sem deixar de desenvolver e praticar. Até 
-                que no ínicio de 2022 decidi buscar uma oportunidade como desenvolvedor 
-                Front-end.
+                Sou um profissional de desenvolvimento de software e suporte ao sistema. 
+                No ínicio da faculdade me dediquei em Front-End dominando HTML, CSS e JavaScript, 
+                além de aprender outras ferramentas e frameworks como o Bootstrap, SASS e JQuery. 
+                Ao conseguir uma oportunidade de trabalho me deparei com a programação Back-End na 
+                plataforma ASP .Net, utilizando C#, além de banco de dados SQL Server.
+            </p>
+            <p>
+                Desenvolvi habilidades para auto-gerenciamento, próprias do métodoloia ágil, trabalho em equipe 
+                compartilhando ideias e buscando a melhor solução sempre. 
             </p>
             <p>     
-                Com o retorno a área senti a necessidade de aprimoramento. Na busca, comprei
-                um curso de desenvolvimento web completo, no qual tenho me capacitado cada
-                vez mais. Hoje, espero uma oportunidade para desenvolver-me ainda mais e cooperar com
-                a empresa como um todo.
+                Também atuo como suporte, realizando correção de bugs do sistema, melhorias e atendimento 
+                aos usuários por meio de chamados. Possuo também conhecimentos em versionamento de código 
+                com o Git, para o gerenciamento do código-fonte de forma eficiênte.
+            </p>
+            <p>
+                Tenho o foco agora em Back-End! Me apaixonei pelo paradigma orientado a objetos e tenho me 
+                dedicado na linguagem C#, buscando sempre criar soluções de tecnologia eficiêntes e escaláveis.
             </p>
             <div class="area-botoes">
                 <a href="https://docs.google.com/uc?export=download&id=13G1gz8Q70LVwUYG4is7scb2m7hE6t97A" class="btn botao-cv">
@@ -221,7 +231,7 @@
                     Trabalhado com muito JavaScript para dar maior poder ao usuário.
                 </p>
                 <div class="area-botoes">
-                    <button class="btn" onclick="acessarUrl('https://michaelferreira969.github.io/noticias-nerd/')">
+                    <button class="btn" href="https://michaelferreira969.github.io/noticias-nerd/" target="_blank">
                         Acessar projeto
                     </button>
                 </div>
