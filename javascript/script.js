@@ -1,6 +1,8 @@
 class Controller {
     constructor() {
         const btnMobile = $('#btn-mobile');
+
+        this._events();
     }
 
     _events() {
@@ -11,7 +13,9 @@ class Controller {
         //Aciona mais rápido
         $("#btn-mobile").on("touchstart", function() { _._ToggleMenu($(this)); });
 
-        $("#btn-link").on("click", function() { _._AcessarUrl($(this)); });
+        $("#btn-link").on("click", function () { _._AcessarUrl($(this)); });
+
+        $("#btn-m").on("click", function () { _._AlterarModo(); });
     }
 
     _ToggleMenu(event) {
