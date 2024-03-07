@@ -298,11 +298,11 @@ section#sobre .area-botoes {
     margin-top: 20px;
 }
 
-/*Sombreamento para a imagem de perfil*/
+/*Sombreamento para a imagem de perfil
 section#sobre img.foto-perfil {
     -webkit-box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.5);
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.5);
-}
+}*/
 
 /*Cores para o botão de baixar CV*/
 a.botao-cv {
@@ -1010,7 +1010,7 @@ footer#rodape .primario i {
 
     /*Espaçaento da seção inicio*/
     section#inicio {
-        padding-top: 10%;
+        padding-top: 7%;
     }
 
     /*Cor de fundo e transição dos botões*/
